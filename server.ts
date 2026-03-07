@@ -6,6 +6,7 @@ const port = 3333;
 
 app.set("view engine", "pug");
 app.set("views", path.join(import.meta.dir, "src", "templates"));
+app.use(express.static(path.join(import.meta.dir, "public")));
 
 app.get("/", (req, res) => {
   res.render("home", { name: "World" });
