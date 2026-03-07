@@ -4,7 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun run server.ts"
+    "dev": "bun run server.ts",
+    "dev:debug": "bun --inspect=3344 server.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
