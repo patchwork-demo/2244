@@ -1,10 +1,14 @@
 import express from "express";
+import path from "path";
 
 const app = express();
 const port = 3333;
 
+app.set("view engine", "pug");
+app.set("views", path.join(import.meta.dir, "src", "templates"));
+
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.render("home", { name: "World" });
 });
 
 app.listen(port, () => {
